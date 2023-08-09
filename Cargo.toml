@@ -1,0 +1,31 @@
+[package]
+name = "vector_dash"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bevy = { version = "0.11.0" }
+bevy-inspector-egui = "0.19.0"
+bevy_rapier2d = "0.22.0"
+
+bevy_vector_shapes = { path = "./crates/bevy_vector_shapes" }
+builder_with = { path = "./crates/builder_with" }
+
+[[bin]]
+name = "core"
+path = "src/bin/vector-dash.rs"
+
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.release]
+codegen-units = 1

@@ -1,0 +1,3 @@
+[submodule "crates/crates/bevy_vector_shapes"]
+	path = crates/crates/bevy_vector_shapes
+	url = https://github.com/rust1cean/bevy_vector_shapes.git
